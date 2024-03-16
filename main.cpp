@@ -1,93 +1,29 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main()
 {
-    double merchandiseCost,storeRent,employeesSalary,electricityCost,expense,actualProfit,changeNetProfit,finalMerchandise;
-    cout << "Enter the total cost of the merchandise: " << endl;
-    cin >> merchandiseCost;
-    cout << " Enter the total salary of the employees including yours: " << endl;
-    cin >> employeesSalary;
-    cout << " Enter the yearly rent: " << endl;
-    cin >> storeRent;
-    cout << " Enter the estimated electricity cost: " << endl;
-    cin >> electricityCost;
+    double d,distance,h,radians,angle,height,feetHeight;
 
-    expense= merchandiseCost+ employeesSalary+ storeRent+ electricityCost;
-    cout << "Your expense is: " << expense << endl;
-    actualProfit= merchandiseCost*0.1;
-    cout << "Your acual profit rate is: " << actualProfit << endl;
-    changeNetProfit= actualProfit/0.85
-    finalMerchandise=(changeNetProfit+ expense)/merchandiseCost;
-    cout << "The final merchandise cost is: " << finalMerchandise << endl;
+    cout << "Enter the horizontal distance between you and the tree in inches: " << endl;
+    cin >> d;
+    distance= d*0.0833;
+    cout << "The horizontal distance in ft is: " << distance << endl;
+
+
+    cout << "Enter the height at sight: " << endl;
+    cin >> h;
+
+    cout << "Enter the angle on the angle-measuring device: " << endl;
+    cin >> radians;
+
+    angle= radians*180/M_PI;
+
+    height= h+d*tan(angle);
+    cout << "The actual height of the tree in inches is: " << height << endl;
+    feetHeight= height*0.0833;
+    cout << "The actual height of the tree in ft is: " << feetHeight << endl;
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
